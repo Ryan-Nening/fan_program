@@ -20,3 +20,12 @@ class Fan:
     def set_radius(self, radius): self.__radius = radius
     def set_color(self, color): self.__color = color
     def set_on(self, on): self.__on = on
+
+    class FanDashboard:
+        def __init__(self):
+            self.main_window = tk.Tk()
+            self.main_window.title("Fan Test")
+            self.main_window.geometry("400x300")
+            self.main_window.configure(bg="#0b0c10")
+            self.fan1 = Fan(Fan.FAST, 10.0, "yellow", True)
+            self.fan2 = Fan(Fan.MEDIUM, 5.0, "blue", False)
