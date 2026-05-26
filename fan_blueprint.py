@@ -31,6 +31,11 @@ class Fan:
             self.fan2 = Fan(Fan.MEDIUM, 5.0, "blue", False)
 
         def build_user_interface(self):
-            tk.Label(self.main_window, text=" FAN 1 STATUS", bg="#0b0c10", fg="#66fcf1", font=("Helvetica", 14, "bold")).pack(pady=(20, 5))
+            tk.Label(self.main_window, text="FAN 1 STATUS", bg="#0b0c10", fg="#66fcf1", font=("Helvetica", 14, "bold")).pack(pady=(20, 5))
             f1_data = f"Speed: {self.fan1.get_speed()} | Radius: {self.fan1.get_radius()} \nColor: {self.fan1.get_color()} | Power: {'ON' if self.fan1.get_on() else 'OFF'}"
             tk.Label(self.main_window, text=f1_data, bg="#0b0c10", fg="#c5c6c7", font=("Courier", 10)).pack()
+
+            tk.Label(self.main_window, text="FAN 2 STATUS", bg="#0b0c10", fg="#66fcf1", font=("Helvetica", 14, "bold")).pack(pady=(20, 5))
+            f2_data = f"Speed: {self.fan2.get_speed()} | Radius: {self.fan2.get_radius()} \nColor: {self.fan2.get_color()} | Power: {'ON' if self.fan2.get_on() else 'OFF'}"
+            tk.Label(self.main_window, text=f2_data, bg="#0b0c10", fg="#c5c6c7", font=("Courier", 10)).pack()
+        
