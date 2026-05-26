@@ -39,3 +39,6 @@ class Fan:
             f2_data = f"Speed: {self.fan2.get_speed()} | Radius: {self.fan2.get_radius()} \nColor: {self.fan2.get_color()} | Power: {'ON' if self.fan2.get_on() else 'OFF'}"
             tk.Label(self.main_window, text=f2_data, bg="#0b0c10", fg="#c5c6c7", font=("Courier", 10)).pack()
         
+        def run_application(self):
+            self.build_user_interface()
+            self.main_window.mainloop()
