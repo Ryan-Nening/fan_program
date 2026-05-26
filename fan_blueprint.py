@@ -24,7 +24,7 @@ class Fan:
 class FanDashboard:
     def __init__(self):
         self.main_window = tk.Tk()
-        self.main_window.title("Fan Test")
+        self.main_window.title("TestFan")
         self.main_window.geometry("400x300")
         self.main_window.configure(bg="#0b0c10")
         self.fan1 = Fan(Fan.FAST, 10.0, "yellow", True)
